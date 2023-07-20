@@ -3,6 +3,7 @@
 # gpt2.download_gpt2(model_name='124M')
 import streamlit as st
 # import gpt_2_simple as gpt2
+import webbrowser
 
 
 # # Load the pre-trained model
@@ -63,7 +64,7 @@ def generate_response(prompt):
     #                              length=100, temperature=0.7, return_as_list=True)[0]
     #     return response
     else:
-        return "Sorry, I don't have a response.
+        return "Sorry, I don't have a response."
     # print(response)
     # return response
 
