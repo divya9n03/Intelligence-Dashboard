@@ -68,7 +68,7 @@ def generate_response(prompt):
 
 
 def main():
-    st.title("Chatbot with Insights")
+    st.title("InsightPulse")
 
     # Create an input field for the user to enter a question or prompt
     prompt = st.text_input("Enter a question or prompt")
