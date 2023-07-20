@@ -1,13 +1,13 @@
 
 # Download the GPT-2 model if it hasn't been downloaded yet
-gpt2.download_gpt2(model_name='124M')
+# gpt2.download_gpt2(model_name='124M')
 import streamlit as st
-import gpt_2_simple as gpt2
+# import gpt_2_simple as gpt2
 
 
-# Load the pre-trained model
-sess = gpt2.start_tf_sess()
-gpt2.load_gpt2(sess, model_name='124M')
+# # Load the pre-trained model
+# sess = gpt2.start_tf_sess()
+# gpt2.load_gpt2(sess, model_name='124M')
 
 # Function to generate a response using the GPT-2 model
 
@@ -58,10 +58,12 @@ def generate_response(prompt):
     elif 'sales' in prompt or 'sale' in prompt:
         s1 = 'Sales can be measured in terms of units sold, revenue generated, or the value of transactions. Key performance indicators (KPIs) such as sales volume, average transaction value, and customer acquisition cost are often used to evaluate sales performance and track the effectiveness of sales strategies.'
         return s1
+    # else:
+    #     response = gpt2.generate(sess, model_name='124M', prefix=prompt,
+    #                              length=100, temperature=0.7, return_as_list=True)[0]
+    #     return response
     else:
-        response = gpt2.generate(sess, model_name='124M', prefix=prompt,
-                                 length=100, temperature=0.7, return_as_list=True)[0]
-        return response
+        return "Sorry, I don't have a response.
     # print(response)
     # return response
 
@@ -81,6 +83,10 @@ def main():
         # Display the generated response
         st.text_area("Response", value=response,
                      height=200, max_chars=None, key=None)
+    
+    if st.button("PowerBI"):
+        url = "https://www.google.com"  # Replace this URL with your desired destination
+        webbrowser.open_new_tab(url)
 
 
 # Run the Streamlit web app
