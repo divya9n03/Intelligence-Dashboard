@@ -2,7 +2,7 @@ import streamlit as st
 import gpt_2_simple as gpt2
 
 # Download the GPT-2 model if it hasn't been downloaded yet
-# gpt2.download_gpt2(model_name='124M')
+gpt2.download_gpt2(model_name='124M')
 
 # Load the pre-trained model
 sess = gpt2.start_tf_sess()
