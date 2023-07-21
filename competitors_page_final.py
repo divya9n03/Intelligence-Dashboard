@@ -19,9 +19,12 @@ def fetch_articles(prompt):
 
 
 st.header('Bayer')
+
 if st.button("PowerBI"):
-    url = "https://www.google.com"  # Replace this URL with your desired destination
+    # Replace this URL with your desired destination
+    url = "https://app.powerbi.com/view?r=eyJrIjoiNzJiMjVkNTItNjdmYS00YmE2LWIyODItYWM4YzM4MDEzNjI3IiwidCI6ImNlMjVmZjc0LWRhMDktNGRjOC1hNWZkLTVhOTI3MzkzNWRmNCIsImMiOjEwfQ%3D%3D"
     webbrowser.open_new_tab(url)
+
 
 st.markdown('---')
 # Create two columns with full-width using the custom CSS class
