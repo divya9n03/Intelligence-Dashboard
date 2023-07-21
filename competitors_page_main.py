@@ -80,11 +80,11 @@ col3 = st.columns(1)
 with st.container():
     st.header('Competitor Research')
     articles = fetch_articles(
-        'OTCPharm OR Pharma OR Stada OR Sanofi OR Servier OR Abbott OR Noavrtis OR Teva OR KRKA OR Glaxosmithkline')
+        'OTCPharm OR Pharma OR Stada OR Sanofi OR Servier OR Abbott OR Noavrtis OR Teva OR KRKA OR Glaxosmithkline OR DRL OR Dr.Reddy')
 
     if st.button("Get more"):
         articles = fetch_articles(
-            'OTCPharm OR Pharma OR Stada OR Sanofi OR Servier OR Abbott OR Noavrtis OR Teva OR KRKA OR Glaxosmithkline')
+            'OTCPharm OR Pharma OR Stada OR Sanofi OR Servier OR Abbott OR Noavrtis OR Teva OR KRKA OR Glaxosmithkline OR DRL OR Dr.Reddy')
         # Display the news articles
         for article in articles:
             st.subheader(article['publishedAt'])
