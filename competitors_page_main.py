@@ -18,7 +18,7 @@ def fetch_articles(prompt):
     return articles
 
 
-st.header('Bayer')
+st.header('Bayers')
 if st.button("PowerBI"):
     url = "https://www.google.com"  # Replace this URL with your desired destination
     webbrowser.open_new_tab(url)
